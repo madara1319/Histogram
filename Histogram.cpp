@@ -18,8 +18,8 @@ string in_str;
 cout << "Enter your text here for histogram analysis \n"<<endl;
 
 //cin >> in_str;
-//in_str = "AGH University of Science and Technology";
-in_str = "test";
+in_str = "AGH University of Science and Technology";
+//in_str = "test";
 //
 //----------------------------------------------------------------------------
 
@@ -65,12 +65,28 @@ double max=*max_element(histogram.begin(),histogram.end());
 //		break;
 ////return -1;
 
-for (auto i = histogram.begin(); i != histogram.end(); ++i)
+//for (auto i = histogram.begin(); i != histogram.end(); ++i)
+//{
+//	histogram.erase(i);
+//	i--;
+//}
+//for (auto it = histogram.begin(); it != histogram.end(); ++it)
+//	cout<<"  "<< *it;
+//	return 0;
+//}
+//
+//
+//
+for (int i {}; i<=max; i++)
 {
-	histogram.erase(i);
-	i--;
+	for (auto h : histogram)
+		if (h>0)
+			cout << "* ";
+		else
+			cout<<  "  ";
+	cout<<endl;
+	for (int i {}; i<histogram.size(); i++)
+		histogram[i]-=1;
+
 }
-for (auto it = histogram.begin(); it != histogram.end(); ++it)
-	cout<<"  "<< *it;
-	return 0;
 }
