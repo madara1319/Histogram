@@ -34,49 +34,8 @@ cout << c << " "; // Print all characters'a' to'z'
 
 cout << endl;
 
-	
-//This shows only 1 row of stars i want columns with length of value h
-//for (auto h :  histogram)
-//{
-//	if (h!=0)
-//		cout  << "* ";
-//	else 
-//		cout << "  ";
-//}
-//
-
 double max=*max_element(histogram.begin(),histogram.end());
-//This shows rows with stars according to max histogram value so its wrong
-//cout<<"Max value: "<< max << endl;
-//for (double i {max}; i<=max; i--)
-//{
-//	if (i!=0)
-//	{
-//		for (auto h :  histogram)
-//		{
-//			if (h!=0)
-//				cout  << "* ";
-//			else 
-//				cout << "  ";
-//		}
-//		cout<<endl;
-//	}
-//	else
-//		break;
-////return -1;
 
-//for (auto i = histogram.begin(); i != histogram.end(); ++i)
-//{
-//	histogram.erase(i);
-//	i--;
-//}
-//for (auto it = histogram.begin(); it != histogram.end(); ++it)
-//	cout<<"  "<< *it;
-//	return 0;
-//}
-//
-//
-//
 for (int i {}; i<=max; i++)
 {
 	for (auto h : histogram)
@@ -85,6 +44,7 @@ for (int i {}; i<=max; i++)
 		else
 			cout<<  "  ";
 	cout<<endl;
+
 	for (int i {}; i<histogram.size(); i++)
 		histogram[i]-=1;
 
